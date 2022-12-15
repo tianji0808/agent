@@ -1,0 +1,243 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://www.jinglingip.cn/price.html",
+            "path": "index.html",
+            "saved": true,
+            "size": 13636,
+            "children": [
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/img/logo-1.png",
+                    "path": "img/logo-1.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/img/weixin.png",
+                    "path": "img/weixin.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/jquery/jquery.min.js",
+                    "path": "js/jquery.min.js",
+                    "saved": true,
+                    "size": 89476,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
+                    "path": "js/bootstrap.bundle.min.js",
+                    "saved": true,
+                    "size": 80698,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/jquery.easing/jquery.easing.min.js",
+                    "path": "js/jquery.easing.min.js",
+                    "saved": true,
+                    "size": 2532,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/waypoints/jquery.waypoints.min.js",
+                    "path": "js/jquery.waypoints.min.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/counterup/counterup.min.js",
+                    "path": "js/counterup.min.js",
+                    "saved": true,
+                    "size": 2406,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/venobox/venobox.min.js",
+                    "path": "js/venobox.min.js",
+                    "saved": true,
+                    "size": 15043,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/owl.carousel/owl.carousel.min.js",
+                    "path": "js/owl.carousel.min.js",
+                    "saved": true,
+                    "size": 44342,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/isotope-layout/isotope.pkgd.min.js",
+                    "path": "js/isotope.pkgd.min.js",
+                    "saved": true,
+                    "size": 35445,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/aos/aos.js",
+                    "path": "js/aos.js",
+                    "saved": true,
+                    "size": 14690,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/js/main.js",
+                    "path": "js/main.js",
+                    "saved": true,
+                    "size": 5535,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/bootstrap/css/bootstrap.min.css",
+                    "path": "css/bootstrap.min.css",
+                    "saved": true,
+                    "size": 159481,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/icofont/icofont.min.css",
+                    "path": "css/icofont.min.css",
+                    "saved": true,
+                    "size": 92214,
+                    "children": [
+                        {
+                            "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/icofont/fonts/icofont.woff2",
+                            "path": "fonts/icofont.woff2",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/icofont/fonts/icofont.woff",
+                            "path": "fonts/icofont.woff",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/venobox/venobox.css",
+                    "path": "css/venobox.css",
+                    "saved": true,
+                    "size": 20309,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/owl.carousel/assets/owl.carousel.min.css",
+                    "path": "css/owl.carousel.min.css",
+                    "saved": true,
+                    "size": 3358,
+                    "children": [
+                        {
+                            "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/owl.carousel/assets/owl.video.play.png",
+                            "path": "img/owl.video.play.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/vendor/aos/aos.css",
+                    "path": "css/aos.css",
+                    "saved": true,
+                    "size": 26053,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/css/style.css",
+                    "path": "css/style.css",
+                    "saved": true,
+                    "size": 38805,
+                    "children": [
+                        {
+                            "url": "https://www.jinglingip.cn/templets/jlip/assets/img/hero-bg.jpg",
+                            "path": "img/hero-bg.jpg",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/img/favicon.png",
+                    "path": "img/favicon.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jinglingip.cn/templets/jlip/assets/img/apple-touch-icon.png",
+                    "path": "img/apple-touch-icon.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "www-jinglingip-cn-iob098yt",
+    "info": {
+        "remark": [],
+        "title": "精灵IP套餐价格/充值续费/在线购买 - 精灵IP代理",
+        "domain": "www.jinglingip.cn",
+        "origin": "https://www.jinglingip.cn",
+        "ip": "113.1.0.117",
+        "main": "index.html",
+        "url": "https://www.jinglingip.cn/price.html",
+        "totalSize": "644 kB",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://www.jinglingip.cn/price.html",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "responseUrl": "https://www.jinglingip.cn/price.html",
+            "redirects": [],
+            "statusCode": 200,
+            "headers": {
+                "server": "Tengine",
+                "date": "Thu, 15 Dec 2022 07:47:06 GMT",
+                "content-type": "text/html",
+                "vary": "Accept-Encoding",
+                "etag": "\"639992f9-3ea6\"",
+                "strict-transport-security": "max-age=31536000",
+                "accept-ranges": "bytes",
+                "x-cache-lookup": "Cache Miss, Cache Miss",
+                "last-modified": "Wed, 14 Dec 2022 09:10:17 GMT",
+                "content-length": "16038",
+                "x-nws-log-uuid": "2810580197307837861",
+                "connection": "close"
+            }
+        },
+        "time": {
+            "start": "2022-12-15T07:47:05.610Z",
+            "end": "2022-12-15T07:47:15.207Z"
+        }
+    },
+    "options": {
+        "url": "https://www.jinglingip.cn/price.html",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "formatter": [],
+        "filenameGenerator": "byType"
+    }
+}

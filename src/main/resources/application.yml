@@ -1,0 +1,17 @@
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8070
+  port: 8070
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://45.57.183.98:3306/my-user?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC #url
+    username: root
+    password: 2TJjPlsMjiXk1mw#
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.agent.bean
