@@ -325,7 +325,7 @@ var _hmt = _hmt || [];
                 <a href="/notice/" target="_blank" title="IP精灵官网">精灵代理公告</a>
               </h4>
               <ul>
-                <div id="tage9661cffb05c350a9ccf8dc451edd8b2" class="templateArea">
+                <div id="tage9661cffb05c350a9ccf8dc451edd8b2" class="noticeList">
 
                 </div>
               </ul>
@@ -334,14 +334,14 @@ var _hmt = _hmt || [];
         <div class="col-lg-4 mt-4 mt-lg-0">
           <div class="widget widget-recent-posts">
               <h4 class="widget-title text-center">
-                <a href="/help/" target="_blank" title="IP精灵下载">精灵代理帮助</a></h4>
+                <a href="help.html" target="_blank" title="IP精灵下载">精灵代理帮助</a></h4>
               <ul>
-                <div id="taga07e493273478ebf5ab94c311da7a499">
-                    <li><time>07-25</time><a href="/help/1738.html" title="【安卓手机增强稳定】使用ipweb代理连接后断开退出等问题">【安卓手机增强稳定】使用ipweb代理连接后断开退出等问题</a></li>
+                <div id="taga07e493273478ebf5ab94c311da7a499" class="helpList">
+                    <!--<li><time>07-25</time><a href="/help/1738.html" title="【安卓手机增强稳定】使用ipweb代理连接后断开退出等问题">【安卓手机增强稳定】使用ipweb代理连接后断开退出等问题</a></li>
                     <li><time>05-09</time><a href="/help/9.html" title="【自建拨号】Windows10电脑PPTP/L2TP设置IP代理教程">【自建拨号】Windows10电脑PPTP/L2TP设置IP代理教程</a></li>
                     <li><time>06-17</time><a href="/help/425.html" title="【视频演示】ipweb安卓APP切换IP代理使用方法">【视频演示】ipweb安卓APP切换IP代理使用方法</a></li>
                     <li><time>06-10</time><a href="/help/4.html" title="【ipweb安卓APP】切换IP软件使用教程">【ipweb安卓APP】切换IP软件使用教程</a></li>
-                    <li><time>06-10</time><a href="/help/5.html" title="【ipweb电脑软件】电脑换IP软件使用教程">【ipweb电脑软件】电脑换IP软件使用教程</a></li>
+                    <li><time>06-10</time><a href="/help/5.html" title="【ipweb电脑软件】电脑换IP软件使用教程">【ipweb电脑软件】电脑换IP软件使用教程</a></li>-->
                 </div>
               </ul>
           </div>
@@ -352,12 +352,12 @@ var _hmt = _hmt || [];
                 <a href="/news/"target="_blank" title="IP精灵代理">精灵代理资讯</a>
               </h4>
                 <ul>
-                    <div id="tag031d0b54045e42b2915f3239e2ba9c81">
-                      <li><time>11-12</time><a href="/news/2049.html" title="IP地址是什么？有什么作用">IP地址是什么？有什么作用</a></li>
+                    <div id="tag031d0b54045e42b2915f3239e2ba9c81" class="newsList">
+                      <!--<li><time>11-12</time><a href="/news/2049.html" title="IP地址是什么？有什么作用">IP地址是什么？有什么作用</a></li>
                       <li><time>11-12</time><a href="/news/2048.html" title="ip地址不是无限的,而是数量有限的">ip地址不是无限的,而是数量有限的</a></li>
                       <li><time>11-12</time><a href="/news/2047.html" title="IP代理本身以及背后的工作原理了解有多少">IP代理本身以及背后的工作原理了解有多少</a></li>
                       <li><time>11-12</time><a href="/news/2046.html" title="为什么有免费和付费的代理IP">为什么有免费和付费的代理IP</a></li>
-                      <li><time>11-11</time><a href="/news/2045.html" title="提高网络安全意识,可以使用换ip软件来保护">提高网络安全意识,可以使用换ip软件来保护</a></li>
+                      <li><time>11-11</time><a href="/news/2045.html" title="提高网络安全意识,可以使用换ip软件来保护">提高网络安全意识,可以使用换ip软件来保护</a></li>-->
                     </div>
                 </ul>
           </div>
@@ -509,20 +509,37 @@ var _hmt = _hmt || [];
         data: null,
 
         success: function(result) {
-            var list = "";
-          //  alert(result.head.msg);
-          //  alert(result.data.notices);
+
+            var noticeList = "";
+            var helpList = "";
+            var newsList = "";
             for (var j = 0; j < result.data.notices.length; j++) {
-                var newsTitle = result.data.notices[j].newsTitle;
+                var title = result.data.notices[j].newsTitle;
                 var createTime = result.data.notices[j].createTime;
-               // alert(newsTitle);
-                list +=
+                noticeList +=
                 "<li><time>"+createTime+"</time><a href='details.html'" +
-                "title="+newsTitle+">"+newsTitle+"</a></li>"
-
+                "title="+title+">"+title+"</a></li>"
             }
+            $(".noticeList").append(noticeList);
 
-            $(".templateArea").append(list);
+            for (var j = 0; j < result.data.helps.length; j++) {
+                var title = result.data.helps[j].newsTitle;
+                var createTime = result.data.helps[j].createTime;
+                helpList +=
+                    "<li><time>"+createTime+"</time><a href='details.html'" +
+                    "title="+title+">"+title+"</a></li>"
+            }
+            $(".helpList").append(helpList);
+
+            for (var j = 0; j < result.data.news.length; j++) {
+
+                var title = result.data.news[j].newsTitle;
+                var createTime = result.data.news[j].createTime;
+                newsList +=
+                    "<li><time>"+createTime+"</time><a href='details.html'" +
+                    "title="+title+">"+title+"</a></li>"
+            }
+            $(".newsList").append(newsList);
 
         },
         error: function(data) {
