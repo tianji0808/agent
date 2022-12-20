@@ -50,7 +50,7 @@ var _hmt = _hmt || [];
 
         </ul>
       </nav>
-      <a href="http://www.ipweb.cc:9001/" class="get-started-btn" target="_blank" rel="nofollow" data-toggle="tooltip"
+      <a href="http://45.57.183.98:9001/" class="get-started-btn" target="_blank" rel="nofollow" data-toggle="tooltip"
          data-placement="bottom" ><i class="icofont-home"></i> Regisiter/Login</a>
     </div>
   </header>
@@ -117,7 +117,7 @@ var _hmt = _hmt || [];
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p><strong>ipweb</strong>Modifier, low latency, no dropping, 3000+static nodes+residential broadband nodes, covering 300+cities nationwide, high-speed stability, automatic weight removal, ultra-low price, free trial after registering real name authentication</p>
-            <a href="http://www.ipweb.cc:9001/" class="btn-learn-more" target="_blank" rel="nofollow">Regisiter</a>
+            <a href="http://45.57.183.98:9001/" class="btn-learn-more" target="_blank" rel="nofollow">Regisiter</a>
           </div>
         </div>
       </div>
@@ -312,7 +312,7 @@ var _hmt = _hmt || [];
         <div class="text-center">
           <h3>免费试用</h3>
           <p>新用户福利！首次注册并实名认证自动送<strong>精灵代理</strong>VIP体验时间，无任何限制。</p>
-          <a rel="nofollow" class="cta-btn" href="http://www.ipweb.cc:9001/" target="_blank" title="注册ipweb">立即注册</a>
+          <a rel="nofollow" class="cta-btn" href="http://45.57.183.98:9001/" target="_blank" title="注册ipweb">立即注册</a>
         </div>
       </div>
     </section>
@@ -494,7 +494,7 @@ var _hmt = _hmt || [];
     <script type="text/javascript">
             
           $(function(){
-                   $('#myModal').modal('show')
+                //   $('#myModal').modal('show')
           });
    </script>
 
@@ -515,9 +515,10 @@ var _hmt = _hmt || [];
             var newsList = "";
             for (var j = 0; j < result.data.notices.length; j++) {
                 var title = result.data.notices[j].newsTitle;
+                var id = result.data.notices[j].id;
                 var createTime = result.data.notices[j].createTime;
                 noticeList +=
-                "<li><time>"+createTime+"</time><a href='details.html'" +
+                "<li><time>"+createTime+"</time><a href='details.html?detailId="+id+"'" +
                 "title="+title+">"+title+"</a></li>"
             }
             $(".noticeList").append(noticeList);
@@ -525,8 +526,9 @@ var _hmt = _hmt || [];
             for (var j = 0; j < result.data.helps.length; j++) {
                 var title = result.data.helps[j].newsTitle;
                 var createTime = result.data.helps[j].createTime;
+                var id = result.data.helps[j].id;
                 helpList +=
-                    "<li><time>"+createTime+"</time><a href='details.html'" +
+                    "<li><time>"+createTime+"</time><a href='details.html?detailId="+id+"'" +
                     "title="+title+">"+title+"</a></li>"
             }
             $(".helpList").append(helpList);
@@ -535,8 +537,9 @@ var _hmt = _hmt || [];
 
                 var title = result.data.news[j].newsTitle;
                 var createTime = result.data.news[j].createTime;
+                var id = result.data.news[j].id;
                 newsList +=
-                    "<li><time>"+createTime+"</time><a href='details.html'" +
+                    "<li><time>"+createTime+"</time><a href='details.html?detailId="+id+"'" +
                     "title="+title+">"+title+"</a></li>"
             }
             $(".newsList").append(newsList);
