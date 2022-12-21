@@ -150,5 +150,19 @@
 
   </select>
 
+  <select id="selectAgentNewsEntityNotice" resultMap="BaseResultMap">
+
+      select  * from t_agent_news_info where type = 1
+      and news_stauts = 1 order by top_stauts desc limit #{limit}
+
+  </select>
+
+  <select id="selectAgentNewsEntityRecommend" resultMap="BaseResultMap">
+
+      select  * from t_agent_news_info where type != 1
+      and news_stauts = 1 order by recommend_stauts desc limit #{limit}
+
+  </select>
+
 
 </mapper>

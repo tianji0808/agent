@@ -37,4 +37,35 @@ public class AgentNewsInfoServiceImpl implements AgentNewsInfoService {
         }
         return entities;
     }
+
+    @Override
+    public AgentNewsInfo getAgentNewsInfoById(Long id) {
+        return agentNewsInfoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<AgentNewsEntity> getAgentNewsEntityNotice(Integer limit) {
+        List<AgentNewsEntity> entities = new ArrayList<>();
+        List<AgentNewsInfo> list = agentNewsInfoMapper.selectAgentNewsEntityNotice(limit);
+        for (AgentNewsInfo agentNewsInfo:list){
+            AgentNewsEntity entity = new AgentNewsEntity();
+            entity.setId(agentNewsInfo.getId());
+            entity.setNewsTitle(agentNewsInfo.getNewsTitle());
+            entities.add(entity);
+        }
+        return entities;
+    }
+
+    @Override
+    public List<AgentNewsEntity> getAgentNewsEntityRecommend(Integer limit) {
+        List<AgentNewsEntity> entities = new ArrayList<>();
+        List<AgentNewsInfo> list = agentNewsInfoMapper.selectAgentNewsEntityRecommend(limit);
+        for (AgentNewsInfo agentNewsInfo:list){
+            AgentNewsEntity entity = new AgentNewsEntity();
+            entity.setId(agentNewsInfo.getId());
+            entity.setNewsTitle(agentNewsInfo.getNewsTitle());
+            entities.add(entity);
+        }
+        return entities;
+    }
 }
