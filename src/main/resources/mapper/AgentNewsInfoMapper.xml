@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.agent.mapper.AgentNewsInfoMapper">
+  <resultMap id="BaseResultMap" type="com.agent.bean.AgentNewsInfo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="news_title" jdbcType="VARCHAR" property="newsTitle" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="recommend_stauts" jdbcType="INTEGER" property="recommendStauts" />
+    <result column="top_stauts" jdbcType="INTEGER" property="topStauts" />
+    <result column="news_stauts" jdbcType="INTEGER" property="newsStauts" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.agent.bean.AgentNewsInfo">
+    <result column="news_content" jdbcType="LONGVARCHAR" property="newsContent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, news_title, `type`, recommend_stauts, top_stauts, news_stauts, create_time
+  </sql>
+  <sql id="Blob_Column_List">
+    news_content
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_agent_news_info
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_agent_news_info
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.agent.bean.AgentNewsInfo">
+    insert into t_agent_news_info (id, news_title, `type`, 
+      recommend_stauts, top_stauts, news_stauts, 
+      create_time, news_content)
+    values (#{id,jdbcType=BIGINT}, #{newsTitle,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
+      #{recommendStauts,jdbcType=INTEGER}, #{topStauts,jdbcType=INTEGER}, #{newsStauts,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{newsContent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.agent.bean.AgentNewsInfo">
+    insert into t_agent_news_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="newsTitle != null">
+        news_title,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="recommendStauts != null">
+        recommend_stauts,
+      </if>
+      <if test="topStauts != null">
+        top_stauts,
+      </if>
+      <if test="newsStauts != null">
+        news_stauts,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="newsContent != null">
+        news_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="newsTitle != null">
+        #{newsTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="recommendStauts != null">
+        #{recommendStauts,jdbcType=INTEGER},
+      </if>
+      <if test="topStauts != null">
+        #{topStauts,jdbcType=INTEGER},
+      </if>
+      <if test="newsStauts != null">
+        #{newsStauts,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="newsContent != null">
+        #{newsContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.agent.bean.AgentNewsInfo">
+    update t_agent_news_info
+    <set>
+      <if test="newsTitle != null">
+        news_title = #{newsTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="recommendStauts != null">
+        recommend_stauts = #{recommendStauts,jdbcType=INTEGER},
+      </if>
+      <if test="topStauts != null">
+        top_stauts = #{topStauts,jdbcType=INTEGER},
+      </if>
+      <if test="newsStauts != null">
+        news_stauts = #{newsStauts,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="newsContent != null">
+        news_content = #{newsContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.agent.bean.AgentNewsInfo">
+    update t_agent_news_info
+    set news_title = #{newsTitle,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=INTEGER},
+      recommend_stauts = #{recommendStauts,jdbcType=INTEGER},
+      top_stauts = #{topStauts,jdbcType=INTEGER},
+      news_stauts = #{newsStauts,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      news_content = #{newsContent,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.agent.bean.AgentNewsInfo">
+    update t_agent_news_info
+    set news_title = #{newsTitle,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=INTEGER},
+      recommend_stauts = #{recommendStauts,jdbcType=INTEGER},
+      top_stauts = #{topStauts,jdbcType=INTEGER},
+      news_stauts = #{newsStauts,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="selectAgentNewsEntityByType" resultMap="BaseResultMap">
+
+      select  * from t_agent_news_info where type = #{type,jdbcType=INTEGER}
+      and news_stauts = 1 order by top_stauts desc limit #{limit}
+
+  </select>
+
+
+</mapper>
