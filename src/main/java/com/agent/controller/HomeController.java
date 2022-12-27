@@ -61,4 +61,21 @@ public class HomeController {
 
         return RespData.success(respparam,ReturnMsg.MSG_SUCC);
     }
+
+    @PostMapping("/getHelp")
+    public RespData getHelp(){
+
+        GetNewDetailsRespparam respparam = new GetNewDetailsRespparam();
+
+        List<AgentNewsEntity> newsList = agentNewsInfoService.getAgentNewsEntityNotice(5);
+        respparam.setNews(newsList);
+
+        List<AgentNewsEntity> recommendList = agentNewsInfoService.getAgentNewsEntityRecommend(5);
+        respparam.setRecommends(recommendList);
+
+        List<AgentNewsEntity> helpList = agentNewsInfoService.getAgentNewsEntityByType(2,3);
+        respparam.setHelps(helpList);
+
+        return RespData.success(respparam,ReturnMsg.MSG_SUCC);
+    }
 }

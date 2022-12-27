@@ -15,4 +15,6 @@ public class GetNewDetailsRespparam {
 
     private List<AgentNewsEntity> recommends;
 
+    private List<AgentNewsEntity> helps;
+
 }
