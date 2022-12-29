@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="com.agent.bean.AgentNewsInfo">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="news_title" jdbcType="VARCHAR" property="newsTitle" />
+    <result column="news_img_url" jdbcType="VARCHAR" property="newsImgUrl" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="recommend_stauts" jdbcType="INTEGER" property="recommendStauts" />
     <result column="top_stauts" jdbcType="INTEGER" property="topStauts" />
@@ -143,10 +144,15 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
 
-  <select id="selectAgentNewsEntityByType" resultMap="BaseResultMap">
+  <select id="selectAgentNewsEntityByType" resultMap="ResultMapWithBLOBs">
 
-      select  * from t_agent_news_info where type = #{type,jdbcType=INTEGER}
+      select  id, news_title,
+      `type`, recommend_stauts, top_stauts,news_img_url,news_content,
+       news_stauts, create_time
+        from
+       t_agent_news_info where type = #{type,jdbcType=INTEGER}
       and news_stauts = 1 order by top_stauts desc limit #{limit}
+
 
   </select>
 

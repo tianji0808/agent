@@ -30,6 +30,8 @@ public class AgentNewsInfoServiceImpl implements AgentNewsInfoService {
             AgentNewsEntity entity = new AgentNewsEntity();
             entity.setId(agentNewsInfo.getId());
             entity.setNewsTitle(agentNewsInfo.getNewsTitle());
+            entity.setNewsContent(agentNewsInfo.getNewsContent());
+            entity.setNewsImgUrl(agentNewsInfo.getNewsImgUrl());
 
             String time = simpleDateFormat.format(agentNewsInfo.getCreateTime());
             entity.setCreateTime(time);

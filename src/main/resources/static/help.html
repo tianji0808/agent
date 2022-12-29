@@ -68,8 +68,9 @@ var _hmt = _hmt || [];
       <div class="container" data-aos="fade-up">
         <div class="row">
         <div class="col-lg-8">
-          <ul class="page-list">
-            <li class="card mb-3">
+          <ul class="page-list" id="page-list">
+
+           <!-- <li class="card mb-3">
               <a href="/help/1738.html">
               <h3 class="card-title">【安卓手机增强稳定】使用ipweb代理连接后断开退出等问题</h3>
               <div class="info-wrap">
@@ -78,12 +79,12 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="info">
                   <p>Windows10电脑PPTP设置IP代理教程，ipweb致力于打造高匿名ip代理服务，品质一流，快速便捷，安心可靠!开启Windows10电脑，完成下列操作使用教...</p>
-                  <!--<p><span class="icofont-edit"></span> jj <span class="icofont-clock-time ml-2"></span>
-                    2022-07-25 <span class="icofont-eye ml-2"></span> 311</p>-->
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>-->
+
+           <!-- <li class="card mb-3">
               <a href="/help/9.html">
               <h3 class="card-title">【自建拨号】Windows10电脑PPTP/L2TP设置IP代理教程</h3>
               <div class="info-wrap">
@@ -94,7 +95,9 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>
+
+            <li class="card mb-3">
               <a href="/help/425.html">
               <h3 class="card-title">【视频演示】ipweb安卓APP切换IP代理使用方法</h3>
               <div class="info-wrap">
@@ -105,7 +108,9 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>
+
+            <li class="card mb-3">
               <a href="/help/4.html">
               <h3 class="card-title">【ipweb安卓APP】切换IP软件使用教程</h3>
               <div class="info-wrap">
@@ -116,7 +121,9 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>
+
+            <li class="card mb-3">
               <a href="/help/5.html">
               <h3 class="card-title">【ipweb电脑软件】电脑换IP软件使用教程</h3>
               <div class="info-wrap">
@@ -127,7 +134,9 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>
+
+            <li class="card mb-3">
               <a href="/help/11.html">
               <h3 class="card-title">【自建拨号】苹果MacOS电脑PPTP/L2TP拨号IP代理教程</h3>
               <div class="info-wrap">
@@ -138,7 +147,9 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>
+
+            <li class="card mb-3">
               <a href="/help/10.html">
               <h3 class="card-title">【自建拨号】苹果手机iphone代理ip设置教程</h3>
               <div class="info-wrap">
@@ -149,7 +160,9 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li><li class="card mb-3">
+            </li>
+
+            <li class="card mb-3">
               <a href="/help/8.html">
               <h3 class="card-title">【自建拨号】安卓手机换IP代理PPTP/L2TP教程</h3>
               <div class="info-wrap">
@@ -160,7 +173,8 @@ var _hmt = _hmt || [];
                 </div>
               </div>
               </a>
-            </li>
+            </li>-->
+
           </ul>
           <nav>
           <div class="pagination-center">
@@ -313,6 +327,30 @@ var _hmt = _hmt || [];
                       "</li>"
               }
               $(".recommends").append(recommendList);
+
+              //处理帮助
+              var helpsList = "";
+              for (var j = 0; j < result.data.helps.length; j++) {
+                  var title = result.data.helps[j].newsTitle;
+                  var newsContent = result.data.helps[j].newsContent;
+                  var newsImgUrl = result.data.helps[j].newsImgUrl;
+                  var id = result.data.helps[j].id;
+                  helpsList +=
+                  "<li class='card mb-3'>"+
+                  "<a href='details.html?detailId="+id+">"+
+                  "<h3 class='card-title'>"+title+"</h3>"+
+                  "<div class='info-wrap'>"+
+                  "<div class='img-wrap align-items-center justify-content-center aos-init aos-animate' data-aos='zoom-in'>"+
+                  "<img src=http://45.57.183.98:9001"+newsImgUrl+" alt=''>"+
+                  "</div>"+
+                  "<div class='info'>"+
+                  "<p>"+newsContent+"</p>"+
+                  "</div>"+
+                  "</div>"+
+                  "</a>"+
+                  "</li>"
+              }
+              $(".page-list").append(helpsList);
           },
           error: function (data) {
 

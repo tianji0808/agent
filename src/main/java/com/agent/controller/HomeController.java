@@ -73,7 +73,7 @@ public class HomeController {
         List<AgentNewsEntity> recommendList = agentNewsInfoService.getAgentNewsEntityRecommend(5);
         respparam.setRecommends(recommendList);
 
-        List<AgentNewsEntity> helpList = agentNewsInfoService.getAgentNewsEntityByType(2,3);
+        List<AgentNewsEntity> helpList = agentNewsInfoService.getAgentNewsEntityByType(2,100);
         respparam.setHelps(helpList);
 
         return RespData.success(respparam,ReturnMsg.MSG_SUCC);

@@ -17,6 +17,8 @@ public class AgentNewsInfo implements Serializable {
      */
     private String newsTitle;
 
+    private String newsImgUrl;
+
     /**
      * 新闻类型 1：公告 2：帮助 3：资讯
      */

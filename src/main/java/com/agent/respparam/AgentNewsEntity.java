@@ -14,6 +14,11 @@ public class AgentNewsEntity {
 
     private String createTime;
 
+    /**
+     * 新闻内容
+     */
+    private String newsContent;
 
+    private String newsImgUrl;
 
 }
