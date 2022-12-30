@@ -70,4 +70,14 @@ public class AgentNewsInfoServiceImpl implements AgentNewsInfoService {
         }
         return entities;
     }
+
+    @Override
+    public AgentNewsInfo getAgentNewsInfoPreviousByType(Integer type, Long id) {
+        return agentNewsInfoMapper.getAgentNewsInfoPreviousByType(type,id);
+    }
+
+    @Override
+    public AgentNewsInfo getAgentNewsInfoNextByType(Integer type, Long id) {
+        return agentNewsInfoMapper.getAgentNewsInfoNextByType(type,id);
+    }
 }

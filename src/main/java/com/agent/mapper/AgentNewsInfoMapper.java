@@ -32,4 +32,10 @@ public interface AgentNewsInfoMapper {
     List<AgentNewsInfo> selectAgentNewsEntityNotice(@Param("limit") Integer limit);
 
     List<AgentNewsInfo> selectAgentNewsEntityRecommend(@Param("limit") Integer limit);
+
+    AgentNewsInfo getAgentNewsInfoPreviousByType(@Param("type") Integer type,
+                                                 @Param("id") Long id);
+
+    AgentNewsInfo getAgentNewsInfoNextByType(@Param("type") Integer type,
+                                                 @Param("id") Long id);
 }

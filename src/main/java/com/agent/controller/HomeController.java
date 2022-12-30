@@ -59,6 +59,21 @@ public class HomeController {
         List<AgentNewsEntity> recommendList = agentNewsInfoService.getAgentNewsEntityRecommend(5);
         respparam.setRecommends(recommendList);
 
+        AgentNewsInfo previousNewsInfo = agentNewsInfoService.getAgentNewsInfoPreviousByType(agentNewsInfo.getType(),detailId);
+        //上一篇
+        if(null != previousNewsInfo){
+            respparam.setPreviousId(previousNewsInfo.getId());
+            respparam.setPreviousTitle(previousNewsInfo.getNewsTitle());
+        }
+
+        AgentNewsInfo nextNewsInfo = agentNewsInfoService.getAgentNewsInfoNextByType(agentNewsInfo.getType(),detailId);
+        //下一篇
+        if(null != nextNewsInfo){
+            respparam.setNextId(nextNewsInfo.getId());
+            respparam.setNextTitle(nextNewsInfo.getNewsTitle());
+        }
+
+
         return RespData.success(respparam,ReturnMsg.MSG_SUCC);
     }
 

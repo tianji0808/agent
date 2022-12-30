@@ -83,9 +83,7 @@
 
                         </div>
                         <div class="row py-xl-4">
-                            <div class="col-lg-6 mt-2">上一篇：<a href="/notice/1164.html">禁止挖矿相关应用和访问虚拟货币交易相关网站的通知！</a>
-                            </div>
-                            <div class="col-lg-6 mt-2">下一篇：<a href="/notice/1434.html">精灵IP禁用和适用场景说明</a></div>
+
                         </div>
                     </div>
                 </div>
@@ -262,6 +260,27 @@
                     "</li>"
             }
             $(".recommends").append(recommendList);
+
+            //处理上一篇
+            var previous = "";
+            var previousId = parseInt(result.data.previousId);
+            if(previousId >0){
+                 previous = "<div class='col-lg-6 mt-2'>上一篇：<a href='details.html?detailId="+previousId+"'>" +
+                    ""+result.data.previousTitle+"</a>" +
+                    "                            </div>";
+
+            }
+
+            //处理下一篇
+            var nextId = parseInt(result.data.nextId);
+            if(nextId >0){
+                var nexts = "<div class='col-lg-6 mt-2'>下一篇：<a href='details.html?detailId="+nextId+"'>" +
+                    ""+result.data.nextTitle+"</a></div>";
+                previous = previous + nexts;
+            }
+
+            $(".py-xl-4").append(previous);
+
         },
         error: function (data) {
 

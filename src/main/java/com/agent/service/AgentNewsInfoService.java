@@ -14,4 +14,8 @@ public interface AgentNewsInfoService {
     List<AgentNewsEntity> getAgentNewsEntityNotice(Integer limit);
 
     List<AgentNewsEntity> getAgentNewsEntityRecommend(Integer limit);
+
+    AgentNewsInfo getAgentNewsInfoPreviousByType(Integer type,Long id);
+
+    AgentNewsInfo getAgentNewsInfoNextByType(Integer type,Long id);
 }
