@@ -35,7 +35,7 @@
     ,
     <include refid="Blob_Column_List" />
     from t_agent_news_info
-    where id &lt; #{id} and type = #{type} and news_stauts= 1
+    where id &lt; #{id} and type = #{type} and news_stauts= 1 order by id asc limit 1
   </select>
 
   <select id="getAgentNewsInfoNextByType"  resultMap="ResultMapWithBLOBs">
@@ -44,7 +44,7 @@
     ,
     <include refid="Blob_Column_List" />
     from t_agent_news_info
-    where id > #{id} and type = #{type} and news_stauts= 1
+    where id > #{id} and type = #{type} and news_stauts= 1 order by id asc limit 1
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">

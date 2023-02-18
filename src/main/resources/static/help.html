@@ -308,10 +308,11 @@ var _hmt = _hmt || [];
               var newsList = "";
               for (var j = 0; j < result.data.news.length; j++) {
                   var title = result.data.news[j].newsTitle;
+                  var id = result.data.news[j].id;
                   //alert(title);
                   var num = j + 1;
                   newsList +=
-                      "<li><a href='details.html?detailId=1' title="+title+"><span>"+num+"</span>"+title+"</a>" +
+                      "<li><a href='details.html?detailId="+id+"' title="+title+"><span>"+num+"</span>"+title+"</a>" +
                       "</li>"
               }
               $(".news").append(newsList);
@@ -320,10 +321,11 @@ var _hmt = _hmt || [];
               var recommendList = "";
               for (var j = 0; j < result.data.recommends.length; j++) {
                   var title = result.data.recommends[j].newsTitle;
+                  var id = result.data.recommends[j].id;
                   //alert(title);
                   var num = j + 1;
                   recommendList +=
-                      "<li><a href='details.html?detailId=1' title="+title+"><span>"+num+"</span>"+title+"</a>" +
+                      "<li><a href='details.html?detailId="+id+"' title="+title+"><span>"+num+"</span>"+title+"</a>" +
                       "</li>"
               }
               $(".recommends").append(recommendList);
