@@ -8,7 +8,7 @@ spring:
   datasource:
     name: test
     #url: jdbc:mysql://45.57.183.98:3306/my-user?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC #url
-    url: jdbc:mysql://45.57.183.98:3306/my-user?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC #url
+    url: jdbc:mysql://209.127.59.66:3306/my-user?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC #url
     username: root
     #password: 2TJjPlsMjiXk1mw#
     password: 2TJjPlsMjiXk1mw#
